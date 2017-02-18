@@ -19,6 +19,43 @@
     }
 
 ?>
+<?php
+
+    if (!empty($vars['object']->likeof)) {
+
+        ?>
+
+    <div class="e-content entry-content">
+        <?=$icon?> Liked 
+            <a href="<?= $vars['object']->body; ?>" <?=$rel?> target="_blank">
+                <?= $vars['object']->description; ?>
+            </a>
+    </div>
+<?php 
+
+    }
+
+    if (!empty($vars['object']->repostof)) {
+
+        ?>
+
+    <div class="e-content entry-content">
+        <?=$icon?> Reposted 
+            <a href="<?= $vars['object']->repostof ?>" <?=$rel?> target="_blank">
+                <?= $vars['object']->description ?>
+            </a>
+            <blockquote>
+                <?= $vars['object']->body ?>
+            </blockquote>
+    </div>
+<?php 
+
+}
+
+else {
+
+    ?>
+
 <div class="known-bookmark">
     <?php
 
@@ -45,4 +82,11 @@
 
     ?>
 </div>
+
+<?php 
+
+    }
+
+    ?>
+
 <?= $this->draw('entity/content/embed'); ?>
