@@ -27,7 +27,7 @@
 
     <div class="e-content entry-content">
         <?=$icon?> Liked 
-            <a href="<?= $vars['object']->body; ?>" <?=$rel?> target="_blank">
+            <a href="<?= $vars['object']->likeof; ?>" <?=$rel?> target="_blank">
                 <?= $vars['object']->description; ?>
             </a>
     </div>
@@ -52,7 +52,7 @@
 
 }
 
-else {
+if ( empty( $vars['object']->repostof) || $vars['object']->likeof ) ) {
 
     ?>
 
@@ -69,7 +69,7 @@ else {
 
         }
 
-        if (!empty($vars['object']->description)) {
+        if (!empty($vars['object']->description)) && (empty($vars['object']->repostof || $vars['object']->likeof)) {
             echo $this->__(['value' => $vars['object']->description, 'object' => $vars['object'], 'rel' => $rel])->draw('forms/output/richtext');
         
         }
