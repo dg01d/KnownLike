@@ -56,7 +56,7 @@
 
 }
 
-if (empty($vars['object']->repostof) || $vars['object']->likeof)) {
+else {
 
     ?>
 
