@@ -4,6 +4,9 @@ Rewrite of idno/Known/IdnoPlugins/Like
 
 Known's _bookmark_ Plugin, Like, doesn't display Likes or Reposts properly at all. This attempts to fix that.
 
+This it at a very early stage - you'll want to use the `works` branch for now.
+
+
 ##Installation
 
 Scary as it might sound, at the moment the only way to get this working is:
@@ -14,6 +17,8 @@ Scary as it might sound, at the moment the only way to get this working is:
  $ cd Known/IdnoPlugins/
  $ rm -rf Like/
  $ git clone https://github.com/dg01d/KnownLike.git Like
+ $ cd Like
+ $ git checkout works
 ```
 
 - Turn _on_ the `Bookmarks` Plugin
