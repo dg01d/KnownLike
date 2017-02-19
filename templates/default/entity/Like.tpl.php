@@ -2,6 +2,8 @@
 
     $rel = '';
     $icon = '';
+    $like = '';
+    $repost = '';
 
     if (!empty($vars['object']->likeof)) {
         $rel = 'rel="like" class="u-like-of"';
