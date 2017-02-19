@@ -27,7 +27,7 @@
 
     <div class="e-content entry-content">
         <?=$icon?> Liked 
-            <a href="<?= $vars['object']->body; ?>" <?=$rel?> target="_blank">
+            <a href="<?= $vars['object']->likeof; ?>" <?=$rel?> target="_blank">
                 <?= $vars['object']->description; ?>
             </a>
     </div>
