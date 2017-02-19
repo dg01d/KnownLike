@@ -19,6 +19,7 @@
     }
 
 ?>
+
 <?php
 
     if (!empty($vars['object']->likeof)) {
@@ -50,9 +51,9 @@
     </div>
 <?php 
 
-}
+    }
 
-if ( empty( $vars['object']->repostof) || $vars['object']->likeof ) ) {
+    if (empty($vars['object']->repostof) || $vars['object']->likeof)) {
 
     ?>
 
