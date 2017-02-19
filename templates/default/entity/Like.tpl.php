@@ -1,7 +1,7 @@
 <?php
 
     $rel = '';
-    $icon = '';
+    $icon = '<i class="fa fa-bookmark"></i> ';
 
     if (!empty($vars['object']->likeof)) {
         $rel = 'rel="like" class="u-like-of"';
