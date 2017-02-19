@@ -6,10 +6,12 @@
     if (!empty($vars['object']->likeof)) {
         $rel = 'rel="like" class="u-like-of"';
         $icon = '<i class="fa fa-star-o"></i> ';
+        $like = $vars['object']->likeof;
     }
     if (!empty($vars['object']->repostof)) {
         $rel = 'rel="like" class="u-repost-of"';
         $icon = '<i class="fa fa-retweet"></i> ';
+        $repost = $vars['object']->repostof;
     }
 
     if (!empty($vars['object']->pageTitle)) {
@@ -27,7 +29,7 @@
 
     <div class="e-content entry-content">
         <?=$icon?> Liked 
-            <a href="<?= $vars['object']->likeof; ?>" <?=$rel?> target="_blank">
+            <a href="<?=$like?>" <?=$rel?> target="_blank">
                 <?= $vars['object']->description; ?>
             </a>
     </div>
@@ -41,7 +43,7 @@
 
     <div class="e-content entry-content">
         <?=$icon?> Reposted 
-            <a href="<?= $vars['object']->repostof; ?>" <?=$rel?> target="_blank">
+            <a href="<?=$repost?>" <?=$rel?> target="_blank">
                 <?= $vars['object']->description; ?>
             </a>
             <blockquote>
