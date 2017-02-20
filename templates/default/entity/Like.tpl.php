@@ -33,23 +33,6 @@
     </div>
 <?php 
 
-    }
-
-    if (!empty($vars['object']->repostof)) {
-
-        ?>
-
-    <div class="e-content entry-content">
-        <?=$icon?> Reposted 
-             <a href="<?= $vars['object']->repostof ?>" <?=$rel?> target="_blank">
-                <?= $vars['object']->description ?>
-            </a>
-            <blockquote>
-                <?= $vars['object']->body ?>
-            </blockquote>
-    </div>
-<?php 
-
 }
 
 if (empty($vars['object']->likeof)) {
