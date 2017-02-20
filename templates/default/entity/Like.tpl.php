@@ -39,15 +39,7 @@
 
         ?>
 
-    <div class="e-content entry-content">
-        <?=$icon?> Reposted 
-             <a href="<?= $vars['object']->repostof ?>" <?=$rel?> target="_blank">
-                <?= $vars['object']->description ?>
-            </a>
-            <blockquote>
-                <?= $vars['object']->body ?>
-            </blockquote>
-    </div>
+   <p>This is a repost</p>
 <?php 
 
 }
