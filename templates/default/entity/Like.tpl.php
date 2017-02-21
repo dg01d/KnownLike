@@ -1,7 +1,7 @@
 <?php
 
     $rel = '';
-    $icon = '<i class="fa fa-bookmark"></i> ';
+    $icon = '<i class="fa fa-bookmark"></i>';
 
     if (!empty($vars['object']->likeof)) {
         $rel = 'rel="like" class="u-like-of"';
@@ -33,9 +33,26 @@
     </div>
 <?php 
 
+    }
+
+    if (!empty($vars['object']->repostof)) {
+
+        ?>
+
+    <div class="e-content entry-content">
+        <?=$icon?> Reposted 
+            <a href="<?= $vars['object']->repostof ?>" <?=$rel?> target="_blank">
+                <?= $vars['object']->description ?>
+            </a>
+            <blockquote>
+                <?= $vars['object']->body ?>
+            </blockquote>
+    </div>
+<?php 
+
 }
 
-if (empty($vars['object']->likeof)) {
+if (empty($vars['object']->repostof||$vars['object']->likeof)) {
 
     ?>
 
